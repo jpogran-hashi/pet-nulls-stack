@@ -48,3 +48,16 @@ component "nulls" {
     null = provider.null.this
   }
 }
+
+component "private_registry_mod" {
+  source  = "tfcdev-acbbf8c0.ngrok.app/hashicorp/echo/null"
+  version = "0.1.0"
+
+  inputs = {
+    charlie = "hello"
+    echo = "world"
+  }
+  providers = {
+    null = provider.null.this
+  }
+}
